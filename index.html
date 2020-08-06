@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="vendors/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Get Gif</title>
+</head>
+<body>
+  <!-- Section App -->
+  <section id="gallery">
+    <div class="container">
+      <h1 align="center"><font color="green">Get Gif</font></h1>
+      <div class="row">
+        <div class="col-5 offset-4">
+          <input type="text" v-on:keyup="getSearch" name="query" v-model="query" placeholder="Search...">
+        </div>
+      </div>
+      <!-- Search Result -->
+      <div class="row">
+        <img-grid v-for="(result, index) in search" v-bind:data="result" v-bind:key="index"></img-grid>
+      </div>
+      <hr>
+      <!-- Trendes -->
+      <h1>Trendes: </h1>
+      <div class="row">
+        <img-grid v-for="(trend, index) in trendes" v-bind:data="trend" v-bind:key="index"></img-grid>
+      </div>
+      <hr>
+  </section>
+</body>
+<script src="vendors/js/vue.js"></script>
+<script src="js/app.js"></script>
+</html>

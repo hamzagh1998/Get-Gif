@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  margin-top: 10px;
+}
+
+input {
+  width: 80%;
+  padding: 1%;
+}
+
+.img-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #f2f2f2;
+  transform: border 0.3s ease;
+}
+
+.img-box:hover {
+  border: 1px solid #000;
+}
+
+
